@@ -1,0 +1,15 @@
+#!/bin/bash
+
+regex="[^/]*$"
+for file in ~/dotfiles/.* # Only match hidden files
+do
+  if [[ -f $file ]]
+  then
+    if [[ $file =~ $regex ]]
+    then
+      filename="${BASH_REMATCH[0]}"
+      rm ~/$filename
+      ln -s $file ~/$filename
+    fi
+  fi
+done

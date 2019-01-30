@@ -104,6 +104,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # source bash profile
-source ~/.bash_profile
+source ~/.aliases
 
 
