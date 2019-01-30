@@ -1,0 +1,37 @@
+# This is Git's per-user configuration file.
+
+[user]
+  name = Matthew Hinea
+  email = matthew.hinea@gmail.com
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = always
+[core]
+  editor = subl -n -w
+	excludesfile = /Users/matthew/.gitignore_global
+[alias]
+  co = checkout
+  ci = commit
+  s = status
+  br = branch
+  type = cat-file -t
+  dump = cat-file -p
+  unstage = reset HEAD --
+  helper = osxkeychain
+  hist = log --pretty=format:\"%Cgreen%h%Creset %ad | %s%d %Cblue[%an]%Creset \" --graph --date=short
+  logs = log --pretty=oneline --abbrev-commit
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  ab = branch --sort=committerdate
+[credential]
+[push]
+  default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[format]
+	pretty = format:%Cblue%aN%Creset %C(auto)%h  %Cgreen%cd %d %Creset%s %+b
