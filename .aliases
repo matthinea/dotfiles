@@ -19,6 +19,7 @@ alias gb='git branch'
 alias seebranchdiff='subl $(git diff --name-only master head)'
 alias gab='git ab | tail -n 20'
 alias gba='git ab | tail -n 20'
+alias gcor='git checkout --track'
 # log
 alias glg='git log --graph'
 alias gl='git log --color=always --date=short | less -R'
@@ -49,6 +50,8 @@ alias gr='git reset'
 alias gp='git pull --no-edit'
 # merge
 alias gm='git merge --no-edit'
+# see github URL
+alias gh="open `git remote -v | grep fetch | awk '{print $2}' | sed 's/git@/http:\/\//' | sed 's/com:/com\//'`| head -n1"
 
 # rails
 alias be='bundle exec'
@@ -74,6 +77,7 @@ fi
 # bash
 alias ..='cd ..'
 alias ngrep='grep -v grep'
+alias clearr="clear && printf '\e[3J'"
 
 eval "$(rbenv init -)"
 
