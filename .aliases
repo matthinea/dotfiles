@@ -1,9 +1,13 @@
-# NOT SURE IF WE NEED THIS ANYMORE... CAME FROM BASH_PROFILE BEFORE OH-MY-SZH
-export SHELL=/bin/zsh
-
 # servers & deployment
 alias spow='touch tmp/restart.txt'
-alias deploy='bundle exec cap production deploy'
+# alias deploy='bundle exec cap production deploy'
+deploy () {
+  if [ $# -eq 0 ]; then
+    bundle exec cap production deploy
+  else
+    bundle exec cap $1 deploy
+  fi
+}
 alias stage='bundle exec cap staging deploy'
 alias resq='QUEUE=* bundle exec rake environment resque:work'
 alias seeserv='tail -f log/development.log'
@@ -51,7 +55,13 @@ alias gp='git pull --no-edit'
 # merge
 alias gm='git merge --no-edit'
 # see github URL
-alias gh="open `git remote -v | grep fetch | awk '{print $2}' | sed 's/git@/http:\/\//' | sed 's/com:/com\//'`| head -n1"
+gh() {
+  open `git remote -v | grep fetch | awk '{print $2}' | sed 's/git@/http:\/\//' | sed 's/com:/com\//'`| head -n1
+}
+# git get next commit on way to master
+gnx() {
+  git log --reverse --ancestry-path head..master --pretty=format:"%h" | head -1
+}
 
 # rails
 alias be='bundle exec'
