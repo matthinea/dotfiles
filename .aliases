@@ -2,6 +2,7 @@
 alias spow='touch tmp/restart.txt'
 # alias deploy='bundle exec cap production deploy'
 deploy () {
+  # defaults to production
   if [ $# -eq 0 ]; then
     bundle exec cap production deploy
   else
@@ -30,6 +31,7 @@ alias gl='git log --color=always --date=short | less -R'
 alias mylog='git log | grep hinea -B 2 -A 4 | less'
 # push
 alias gpb='git branch | grep -e "^*" | cut -d" " -f 2 | xargs git push origin'
+alias gpbf='git branch | grep -e "^*" | cut -d" " -f 2 | xargs -n 1 -I branch_name git push origin branch_name --force-with-lease'
 alias gps='git push && stage'
 # status
 alias gs='git status'
