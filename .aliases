@@ -1,5 +1,5 @@
 # servers & deployment
-alias spow='touch tmp/restart.txt'
+alias p='puma-dev -stop'
 # alias deploy='bundle exec cap production deploy'
 deploy () {
   # defaults to production
@@ -12,6 +12,7 @@ deploy () {
 alias stage='bundle exec cap staging deploy'
 alias resq='QUEUE=* bundle exec rake environment resque:work'
 alias seeserv='tail -f log/development.log'
+alias s='tail -f log/development.log'
 
 # G I T
 # project-specific
@@ -31,6 +32,7 @@ alias gl='git log --color=always --date=short | less -R'
 alias mylog='git log | grep hinea -B 2 -A 4 | less'
 # push
 alias gpb='git branch | grep -e "^*" | cut -d" " -f 2 | xargs git push origin'
+alias gpub='git branch | grep -e "^*" | cut -d" " -f 2 | xargs git pull origin'
 alias gpbf='git branch | grep -e "^*" | cut -d" " -f 2 | xargs -n 1 -I branch_name git push origin branch_name --force-with-lease'
 alias gps='git push && stage'
 # status
@@ -39,6 +41,7 @@ alias opendiff='subl $(git status --porcelain | awk '\''{print $2}'\'')'
 # diff
 alias gd='git diff'
 alias gds='git diff --staged'
+alias gdh='git diff head^'
 # commit
 alias gcm='git commit -m'
 alias gc='git commit'
@@ -66,10 +69,46 @@ gnx() {
 }
 
 # rails
+alias b='bundle'
+alias bund='bundle'
 alias be='bundle exec'
 alias testdbreset='rails db:environment:set db:drop db:create db:schema:load RAILS_ENV=test'
 alias rc='rails c'
 alias rser='rails s'
+bump() {
+  # date_regex='\(\d{4}.\d{2}.\d{2}\).rev\d+'
+  gem=${PWD##*/}
+  date_regex='[0-9]\{4\}\.[0-9]\{2\}\.[0-9]\{2\}'
+  gem_date=$(sed -n -e "s/\.version\s*= \([0-9]\{4\}\.[0-9]\{2\}\.[0-9]\{2\}\).*/\1/p" "${PWD##*/}.gemspec")
+  print $gem_date
+
+
+  IFS=$'\t' read -r VAR1 VAR2 VAR3 \
+    < <(sed 's/\.version\s*= \([0-9]\{4\}\.[0-9]\{2\}\.[0-9]\{2\}\).*/\1/p' \
+             <<< "$TEXT"
+       )
+
+
+  DATE=`date +%Y.%m.%d`
+  if [ "$gem_date" = "$DATE" ]; then
+    # bump revision
+    # sed -i "s/^gem '${gem}', '${gem_date}.rev\([0-9]+\)'/gem '${gem}', ''/g" Gemfile
+    # sed -ei "s/\(^gem '${gem}', '${date_regex}\.rev[0-9]'[^;]*;/\1 /dev/stdout;/" your_file
+    # sed -i '' "/^gem '${gem}'/ s| rev[0-9]*'| rev|" Gemfile
+    print same
+  else
+    # set to rev0 of today's date
+    # sed -ei "s/\(^gem '${gem}', '${date_regex}.*$/\1 replacement_stuff/" your_file
+    sed -i '' "/^gem '${gem}'/ s| '${date_regex}\.rev[0-9]*'| '$DATE.rev0'|" Gemfile
+    # sed -i '' "/^gem '${gem}'/ s| '[0-9]\{4\}\.[0-9]\{2\}\.[0-9]\{2\}\.rev[0-9]*'| `date +%Y.%m.%d`.rev0|" Gemfile
+    print diff
+  fi
+  # var=$(grep -oE -m 1 "gem 'td-chimera-widgets', '.*'" Gemfile);
+  # var="${var#*\'}"; var="${var%\'*}"
+  # grep -o "gem 'td-chimera-widgets', '\(\d{4}.\d{2}.\d{2}\).rev\d+'" Gemfile
+  print $gem_date
+  print $DATE
+}
 
 # mysql
 alias tddevdb='mysql -uroot -p talentdesk'
@@ -90,6 +129,10 @@ fi
 alias ..='cd ..'
 alias ngrep='grep -v grep'
 alias clearr="clear && printf '\e[3J'"
+# see all files in current directory and their LOC, ordered by LOC
+loc() {
+  find ./** -type f -exec wc -l {} + | sort -rn
+}
 
 eval "$(rbenv init -)"
 

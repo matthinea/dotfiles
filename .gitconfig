@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 
 [user]
-  name = Matthew Hinea
+	name = Matt
   email = matthew.hinea@gmail.com
 [color]
   diff = auto
