@@ -30,6 +30,9 @@ alias gcor='git checkout --track'
 alias glg='git log --graph'
 alias gl='git log --color=always --date=short | less -R'
 alias mylog='git log | grep hinea -B 2 -A 4 | less'
+myfiles() {
+  git log --pretty="%H" --author="Matthew Hinea" | while read commit_hash; do git show --oneline --name-only $commit_hash | tail -n+2; done | sort | uniq
+}
 # push
 alias gpb='git branch | grep -e "^*" | cut -d" " -f 2 | xargs git push origin'
 alias gpub='git branch | grep -e "^*" | cut -d" " -f 2 | xargs git pull origin'
