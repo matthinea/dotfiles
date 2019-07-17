@@ -1,14 +1,14 @@
 # servers & deployment
 alias p='puma-dev -stop'
-# alias deploy='bundle exec cap production deploy'
-deploy () {
-  # defaults to production
-  if [ $# -eq 0 ]; then
-    bundle exec cap production deploy
-  else
-    bundle exec cap $1 deploy
-  fi
-}
+# remove so that I'm forced to remember to use shipit
+# deploy () {
+#   # defaults to production
+#   if [ $# -eq 0 ]; then
+#     bundle exec cap production deploy
+#   else
+#     bundle exec cap $1 deploy
+#   fi
+# }
 alias stage='bundle exec cap staging deploy'
 alias resq='QUEUE=* bundle exec rake environment resque:work'
 alias seeserv='tail -f log/development.log'
@@ -75,6 +75,7 @@ gnx() {
 alias b='bundle'
 alias bund='bundle'
 alias be='bundle exec'
+alias bup='bundle update --source'
 alias testdbreset='rails db:environment:set db:drop db:create db:schema:load RAILS_ENV=test'
 alias rc='rails c'
 alias rser='rails s'
