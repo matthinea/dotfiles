@@ -110,3 +110,6 @@ source ~/.aliases
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+export PATH=/Users/matthew/Library/Python/3.7/bin:$PATH
+export AXLE_PATH=$HOME/.dotfiles/bin
+source /Users/matthew/Library/Python/3.7/bin/aws_zsh_completer.sh

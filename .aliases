@@ -1,3 +1,6 @@
+# temp
+alias subl='mine'
+
 # servers & deployment
 alias p='puma-dev -stop'
 # remove so that I'm forced to remember to use shipit
@@ -9,9 +12,6 @@ alias p='puma-dev -stop'
 #     bundle exec cap $1 deploy
 #   fi
 # }
-alias stage='bundle exec cap staging deploy'
-alias resq='QUEUE=* bundle exec rake environment resque:work'
-alias seeserv='tail -f log/development.log'
 alias s='tail -f log/development.log'
 
 # G I T
@@ -22,7 +22,7 @@ alias esbump='git add Gemfile* && git commit -m "elasticsearch-talentdesk versio
 alias assbump='bundle update reach-assets && git add . && git ci -m "assets bump"'
 # branch
 alias gb='git branch'
-alias seebranchdiff='subl $(git diff --name-only master head)'
+alias seebranchdiff='mine $(git diff --name-only master head)'
 alias gab='git ab | tail -n 20'
 alias gba='git ab | tail -n 20'
 alias gcor='git checkout --track'
@@ -40,7 +40,7 @@ alias gpbf='git branch | grep -e "^*" | cut -d" " -f 2 | xargs -n 1 -I branch_na
 alias gps='git push && stage'
 # status
 alias gs='git status'
-alias opendiff='subl $(git status --porcelain | awk '\''{print $2}'\'')'
+alias opendiff='mine $(git status --porcelain | awk '\''{print $2}'\'')'
 # diff
 alias gd='git diff'
 alias gds='git diff --staged'
@@ -140,7 +140,7 @@ loc() {
 
 eval "$(rbenv init -)"
 
-export EDITOR='subl -w'
+export EDITOR='mine -w'
 export HISTTIMEFORMAT="%d/%m/%y %T "
 export HISTCONTROL=ignorespace
 

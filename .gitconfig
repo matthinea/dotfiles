@@ -1,15 +1,14 @@
 # This is Git's per-user configuration file.
 
 [user]
-	name = Matt
+	name = Matthew Hinea
   email = matthew.hinea@gmail.com
 [color]
   diff = auto
   status = auto
   branch = auto
   ui = always
-[core]
-  editor = subl -n -w
+  editor = vim
 	excludesfile = /Users/matthew/.gitignore_global
 [alias]
   co = checkout
