@@ -126,4 +126,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 export PATH=/Users/matthew/Library/Python/3.7/bin:$PATH
 export AXLE_PATH=$HOME/.dotfiles/bin
+export RAILS_CONSOLE=pry
 source /Users/matthew/Library/Python/3.7/bin/aws_zsh_completer.sh

@@ -10,3 +10,5 @@ eval "$(rbenv init -)"
 export EDITOR='mine -w'
 export HISTTIMEFORMAT="%d/%m/%y %T "
 export HISTCONTROL=ignorespace
+export NODE_ENV=development
+

@@ -1,3 +1,10 @@
 *~
 .DS_Store
 .idea/*
+.generators
+.idea/
+.rakeTasks
+.ruby-version
+dump.rdb
+.ssl/
+*.swp
