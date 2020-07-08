@@ -36,3 +36,4 @@
 	pretty = format:%Cblue%aN%Creset %C(auto)%h  %Cgreen%cd %d %Creset%s %+b
 [core]
 	excludesfile = /Users/matthew/.gitignore_global
+	editor = vim
