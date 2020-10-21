@@ -128,3 +128,5 @@ export PATH=/Users/matthew/Library/Python/3.7/bin:$PATH
 export AXLE_PATH=$HOME/.dotfiles/bin
 export RAILS_CONSOLE=pry
 source /Users/matthew/Library/Python/3.7/bin/aws_zsh_completer.sh
+export PATH="/usr/local/opt/python@3.7/bin:$PATH"
+export PATH="/usr/local/opt/python@3.7/bin:$PATH"
