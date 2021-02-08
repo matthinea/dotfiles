@@ -70,6 +70,7 @@ plugins=(
   yarn
   gulp
   zsh_reload
+  docker
 )
 
 source $ZSH/oh-my-zsh.sh
