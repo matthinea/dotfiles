@@ -133,7 +133,6 @@ source /Users/matthew/Library/Python/3.7/bin/aws_zsh_completer.sh
 export PATH="/usr/local/opt/python@3.7/bin:$PATH"
 export PATH="/usr/local/opt/python@3.7/bin:$PATH"
 
-export PATH="$HOME/.poetry/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
