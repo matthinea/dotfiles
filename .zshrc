@@ -63,14 +63,15 @@ ZSH_THEME="awesomepanda"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  colorize
+  docker
   git
+  gulp
+  pyenv
   rails
   ruby
-  colorize
   yarn
-  gulp
   zsh_reload
-  docker
 )
 
 source $ZSH/oh-my-zsh.sh
