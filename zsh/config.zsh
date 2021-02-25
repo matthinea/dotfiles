@@ -1,8 +1,8 @@
 export CLICOLOR=1
 # set home to work
-export START="/Users/matthew/"
+export START="/Users/matthew/axle"
 if [[ $PWD == $HOME ]]; then
-    cd $START
+  cd $START
 fi
 
 eval "$(rbenv init -)"
