@@ -63,10 +63,10 @@ ZSH_THEME="awesomepanda"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-# Needs to come before blugins for pyenv plugin to work
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+# If you remove pyenv plugin, uncomment below:
+# if command -v pyenv 1>/dev/null 2>&1; then
+#   eval "$(pyenv init -)"
+# fi
 
 plugins=(
   colorize
