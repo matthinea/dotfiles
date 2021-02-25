@@ -62,6 +62,12 @@ ZSH_THEME="awesomepanda"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+# Needs to come before blugins for pyenv plugin to work
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
 plugins=(
   colorize
   docker
@@ -126,13 +132,6 @@ unset config_files
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-export PATH=/Users/matthew/Library/Python/3.7/bin:$PATH
 export AXLE_PATH=$HOME/.dotfiles/bin
 export RAILS_CONSOLE=pry
 source /Users/matthew/Library/Python/3.7/bin/aws_zsh_completer.sh
-export PATH="/usr/local/opt/python@3.7/bin:$PATH"
-export PATH="/usr/local/opt/python@3.7/bin:$PATH"
-
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
