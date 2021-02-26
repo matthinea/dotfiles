@@ -18,7 +18,7 @@ alias gps='git push && stage'
 
 # status
 alias gs='git status'
-alias opendiff='mine $(git status --porcelain | awk '\''{print $2}'\'')'
+alias opendiff='mine $(vim status --porcelain | awk '\''{print $2}'\'')'
 
 # diff
 alias gd='git diff'
