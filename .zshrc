@@ -69,6 +69,7 @@ ZSH_THEME="awesomepanda"
 # fi
 
 plugins=(
+  asdf
   colorize
   docker
   git
