@@ -1,6 +1,8 @@
 export HISTTIMEFORMAT="%d/%m/%y %T "
 GIT_PROMPT_FETCH_REMOTE_STATUS=0 
 
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES  # needed to prevent odd errors when testing spark applications
+
 # added by travis gem
 [ -f /Users/matthew/.travis/travis.sh ] && source /Users/matthew/.travis/travis.sh
 
