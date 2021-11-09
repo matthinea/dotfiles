@@ -24,3 +24,10 @@ rbenv init
 
 # install zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# fix overwritten .zshrc
+if [[ -f ~/.zshrc.pre-oh-my-zsh ]]
+  rm ~/.zshrc
+  rm ~/.zshrc.pre-oh-my-zsh
+  ln -s ~/dotfiles/.zshrc ~/.zshrc
+fi
