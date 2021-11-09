@@ -20,6 +20,7 @@ done
 
 # install rbenv
 brew install rbenv
+rbenv init
 
 # install zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
