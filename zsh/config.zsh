@@ -1,6 +1,6 @@
 export CLICOLOR=1
 # set home to work
-export START="/Users/matthew/axle"
+export START="/Users/matthi/axle"
 if [[ $PWD == $HOME ]]; then
   cd $START
 fi

@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/matthew/.oh-my-zsh"
+export ZSH="/Users/matthi/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -135,7 +135,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 export AXLE_PATH=$HOME/.dotfiles/bin
 export RAILS_CONSOLE=pry
-source /Users/matthew/Library/Python/3.7/bin/aws_zsh_completer.sh
+source /Users/matthi/Library/Python/3.7/bin/aws_zsh_completer.sh
 
 . ~/.asdf/plugins/java/set-java-home.zsh  # Sets JAVA_HOME
 
