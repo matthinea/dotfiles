@@ -135,7 +135,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 export AXLE_PATH=$HOME/.dotfiles/bin
 export RAILS_CONSOLE=pry
-source /Users/matthi/Library/Python/3.7/bin/aws_zsh_completer.sh
 
 . ~/.asdf/plugins/java/set-java-home.zsh  # Sets JAVA_HOME
 
