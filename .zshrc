@@ -78,7 +78,6 @@ plugins=(
   rails
   ruby
   yarn
-  zsh_reload
 )
 
 source $ZSH/oh-my-zsh.sh
