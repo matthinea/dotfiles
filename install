@@ -42,3 +42,6 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 asdf plugin-add java https://github.com/halcyon/asdf-java.git
 asdf install java adoptopenjdk-8.0.312+7
 asdf global java adoptopenjdk-8.0.312+7
+
+# install heroku cli
+brew tap heroku/brew && brew install heroku
