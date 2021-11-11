@@ -36,3 +36,9 @@ fi
 curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
 sudo installer -pkg AWSCLIV2.pkg -target /
 rm AWSCLIV2.pkg
+
+# install asdf, java asdf plugin, and java 8, and set system java to global default java
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+asdf plugin-add java https://github.com/halcyon/asdf-java.git
+asdf install java adoptopenjdk-8.0.312+7
+asdf global java adoptopenjdk-8.0.312+7
