@@ -39,7 +39,7 @@ alias gch='git checkout'
 # add
 alias gaa='git add -A'
 alias ga='git add'
-alias gap='git add --intent-to-add . && git add --patch'
+alias gaap='git add --intent-to-add . && git add --patch'
 
 # reset
 alias gr='git reset'
