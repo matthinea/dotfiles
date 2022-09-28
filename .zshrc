@@ -139,3 +139,5 @@ export RAILS_CONSOLE=pry
 # make << $ pyspark >> open a jupyter notebook
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
+
+export DISABLE_SPRING=true
