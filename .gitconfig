@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 
 [user]
-	name = Matthew Hinea
+  name = Matthew Hinea
   email = matthew.hinea@gmail.com
 [color]
   diff = auto
@@ -9,7 +9,7 @@
   branch = auto
   ui = always
   editor = vim
-	excludesfile = /Users/matthi/.gitignore_global
+  excludesfile = /Users/matthi/.gitignore_global
 [alias]
   co = checkout
   ci = commit
@@ -21,19 +21,19 @@
   helper = osxkeychain
   hist = log --pretty=format:\"%Cgreen%h%Creset %ad | %s%d %Cblue[%an]%Creset \" --graph --date=short
   logs = log --pretty=oneline --abbrev-commit
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   ab = branch --sort=committerdate
 [credential]
 [push]
   default = simple
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [format]
-	pretty = format:%Cblue%aN%Creset %C(auto)%h  %Cgreen%cd %d %Creset%s %+b
+  pretty = format:%Cblue%aN%Creset %C(auto)%h  %Cgreen%cd %d %Creset%s %+b
 [core]
-	excludesfile = /Users/matthi/.gitignore_global
-	editor = vim
+  excludesfile = /Users/matthi/.gitignore_global
+  editor = vim
