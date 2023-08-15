@@ -29,13 +29,6 @@ alias gdh='git diff head^'
 alias gcm='git commit -m'
 alias gc='git commit'
 
-# stash
-alias gsh='git stash'
-alias gshp='git stash pop'
-
-# checkout
-alias gch='git checkout'
-
 # add
 alias gaa='git add -A'
 alias ga='git add'
@@ -50,7 +43,6 @@ alias gpur='git branch | grep -e "^*" | cut -d" " -f 2 | xargs -I {} git pull or
 # merge
 alias gm='git merge --no-edit'
 
-# TODO: git get next commit on way to master
 gnx() {
   git log --reverse --ancestry-path head..master --pretty=format:"%h" | head -1
 }
