@@ -18,6 +18,10 @@ done
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# install container stuff
+brew install podman
+brew install docker-compose
+
 # install rbenv
 brew install rbenv
 rbenv init
