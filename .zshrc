@@ -124,7 +124,7 @@ export PATH="$PATH:/Users/matthi/Library/Application Support/multipass/bin"
 
 # all of our zsh files
 typeset -U config_files
-config_files=($HOME/dotfiles/**/*.zsh)
+config_files=($HOME/dotfiles/sources/*.zsh)
 
 # load everything but the path and completion files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
