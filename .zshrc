@@ -119,9 +119,6 @@ then
   source ~/.localrc
 fi
 
-# Get docker commands from multipass
-export PATH="$PATH:/Users/matthi/Library/Application Support/multipass/bin"
-
 # all of our zsh files
 typeset -U config_files
 config_files=($HOME/dotfiles/sources/*.zsh)
