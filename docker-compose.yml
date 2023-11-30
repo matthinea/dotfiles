@@ -1,0 +1,40 @@
+version: '2'
+services:
+  elasticsearch-dev:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.1-arm64
+    container_name: es-dev
+    environment:
+      - cluster.name=es-dev
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m"
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    mem_limit: 2g
+    volumes:
+      - esdata-dev:/usr/share/elasticsearch/data
+    ports:
+      - 127.0.0.1:9200:9200
+    networks:
+      - esnet
+  kibana-dev:
+    image: docker.elastic.co/kibana/kibana:8.11.1-arm64
+    container_name: kibana-dev
+    environment:
+      SERVER_NAME: localhost
+      ELASTICSEARCH_HOSTS: http://es-dev:9200
+    ports:
+      - 127.0.0.1:5601:5601
+    networks:
+      - esnet
+
+volumes:
+  esdata-dev:
+    driver: local
+
+networks:
+  esnet:
+    driver: bridge
