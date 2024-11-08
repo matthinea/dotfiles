@@ -17,3 +17,10 @@ listening() {
         echo "Usage: listening [pattern]"
     fi
 }
+
+jsonl_to_json() {
+  for chunk in $1; do
+     jq -s '.' "$chunk" > "${chunk}.json"
+     rm "$chunk"
+  done
+}
