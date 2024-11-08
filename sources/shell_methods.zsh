@@ -7,3 +7,13 @@ samp() {
   eval filename="$1"
   cat $1 | head -n 10000 > "${filename%.*}_sample.csv"
 }
+
+listening() {
+    if [ $# -eq 0 ]; then
+        sudo lsof -iTCP -sTCP:LISTEN -n -P
+    elif [ $# -eq 1 ]; then
+        sudo lsof -iTCP -sTCP:LISTEN -n -P | grep -i --color $1
+    else
+        echo "Usage: listening [pattern]"
+    fi
+}
