@@ -24,3 +24,7 @@ jsonl_to_json() {
      rm "$chunk"
   done
 }
+
+awscreds() {
+  aws configure export-credentials --profile default
+}
