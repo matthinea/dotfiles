@@ -143,3 +143,5 @@ export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
 export DISABLE_SPRING=true
 
 zstyle ':bracketed-paste-magic' active-widgets '.self-*'
+
+. "$HOME/.local/bin/env"
