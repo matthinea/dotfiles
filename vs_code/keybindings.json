@@ -1,0 +1,39 @@
+[
+  // === TERMINAL ===
+  {
+    "key": "ctrl+space",          // open terminal
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+shift+space",    // new terminal
+    "command": "workbench.action.terminal.new"
+  },
+
+  // === ESSENTIALS ===
+  {
+    "key": "ctrl+shift+p",        // command palette
+    "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "ctrl+p",              // quick open file
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+shift+f",        // search in project
+    "command": "workbench.action.findInFiles"
+  },
+  {
+    "key": "ctrl+b",              // toggle sidebar
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+\\",             // split editor
+    "command": "workbench.action.splitEditor"
+  },
+  {
+    "key": "ctrl+shift+f",        // format document
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+  }
+]
+

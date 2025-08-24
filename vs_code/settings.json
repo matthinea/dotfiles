@@ -1,0 +1,78 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontSize": 14,
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [100],
+
+  // ===== Editor =====
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // fallback formatter
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // ===== Python / uv / .venv =====
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "python.venvPath": "${workspaceFolder}/.venv",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.testing.pytestEnabled": true,
+  "python.linting.enabled": true,
+  // Let uv handle virtualenvs
+  "python.terminal.activateEnvironment": true,
+
+  // ===== Ruby / Rails =====
+  "ruby.useBundler": true,
+  "ruby.useLanguageServer": true,
+  "ruby.interpreter.commandPath": "bin/rails", // prefer Rails binstub when available
+  "solargraph.useBundler": true,
+  "railsLogFile": "log/development.log", // Rails-specific log tailing
+  "files.associations": {
+    "Gemfile": "ruby",
+    "Rakefile": "ruby",
+    "*.rake": "ruby",
+    "*.erb": "erb",
+    "*.haml": "haml"
+  },
+
+  // ===== Shell =====
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.profiles": {
+    "zsh": {
+      "path": "/bin/zsh"
+    }
+  },
+
+  // ===== SQLTools / Postgres =====
+  "sqltools.connections": [
+    {
+      "name": "Local Postgres",
+      "driver": "PostgreSQL",
+      "server": "localhost",
+      "port": 5432,
+      "username": "postgres",
+      "database": "postgres"
+    }
+  ],
+
+  // ===== REST Client =====
+  "rest-client.environmentVariables": {
+    "dev": {
+      "es_url": "http://localhost:9200"
+    }
+  },
+
+  // ===== Docker =====
+  "docker.dockerPath": "/usr/local/bin/docker",
+  "docker.composeCommand": "docker compose",
+
+  // ===== Git =====
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.pruneOnFetch": true,
+  "git.rebaseWhenSync": true,
+  "gitlens.currentLine.enabled": true,
+  "gitlens.hovers.currentLine.over": "line"
+}
+
