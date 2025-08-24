@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "rebornix.ruby",
+    "castwide.solargraph",
+    "shopify.ruby-lsp",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-toolsai.jupyter",
+    "mtxr.sqltools",
+    "mtxr.sqltools-driver-pg",
+    "humao.rest-client",
+    "ms-azuretools.vscode-docker",
+    "eamodio.gitlens",
+    "ms-vscode-remote.remote-containers",
+    "oderwat.indent-rainbow",
+    "usernamehw.errorlens",
+    "dracula-theme.theme-dracula",
+    "zhuangtongfa.material-theme"
+  ]
+}
+

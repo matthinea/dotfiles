@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Rails server",
+      "type": "ruby",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/rails",
+      "args": ["server"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Attach to Docker container",
+      "type": "docker",
+      "request": "attach",
+      "remoteRoot": "/app"
+    }
+  ]
+}
+
